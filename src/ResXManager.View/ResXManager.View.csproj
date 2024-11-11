@@ -28,6 +28,7 @@
     <PackageReference Include="AutoProperties.Fody" PrivateAssets="all" />
     <PackageReference Include="DataGridExtensions" />
     <PackageReference Include="Fody" PrivateAssets="all" />
+    <PackageReference Include="Ookii.Dialogs.Wpf" />
     <PackageReference Include="PropertyChanged.Fody" PrivateAssets="all" />
     <PackageReference Include="Throttle.Fody" PrivateAssets="all" />
     <PackageReference Include="TomsToolbox.Wpf.Composition.AttributedModel" />

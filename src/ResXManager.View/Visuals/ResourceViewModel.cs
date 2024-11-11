@@ -103,6 +103,10 @@ public sealed partial class ResourceViewModel : INotifyPropertyChanged, IDisposa
 
     public ICommand ImportExcelCommand => new DelegateCommand<string>(ImportExcel);
 
+    public ICommand ExportAndroidAllCommand => new DelegateCommand<string>(ExportAndroidAll);
+
+    public ICommand ExportiOSAllCommand => new DelegateCommand<string>(ExportiOSAll);
+
     public ICommand ToggleInvariantCommand => new DelegateCommand(() => SelectedTableEntries.Any(), ToggleInvariant);
 
     public static ICommand ToggleItemInvariantCommand => new DelegateCommand<DataGrid>(CanToggleItemInvariant, ToggleItemInvariant);
@@ -522,6 +526,22 @@ public sealed partial class ResourceViewModel : INotifyPropertyChanged, IDisposa
         var changes = ResourceManager.ImportExcelFile(fileName);
 
         changes.Apply();
+    }
+
+    private void ExportAndroidAll(string? directoryPath)
+    {
+        if (directoryPath.IsNullOrEmpty())
+            return;
+
+        ResourceManager.ExportAndroidFiles(directoryPath);
+    }
+
+    private void ExportiOSAll(string? directoryPath)
+    {
+        if (directoryPath.IsNullOrEmpty())
+            return;
+
+        ResourceManager.ExportiOSFiles(directoryPath);
     }
 
     private async void Reload()

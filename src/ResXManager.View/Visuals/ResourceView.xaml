@@ -35,6 +35,8 @@
     <toms:ConfirmedCommandConverter x:Key="CutCommandConverter" Executing="CutCommandConverter_Executing" />
     <toms:ConfirmedCommandConverter x:Key="ImportExcelCommandConverter" Executing="ImportExcelCommandConverter_Executing" Error="CommandConverter_Error" />
     <toms:ConfirmedCommandConverter x:Key="ExportExcelCommandConverter" Executing="ExportExcelCommandConverter_Executing" Error="CommandConverter_Error" />
+    <toms:ConfirmedCommandConverter x:Key="ExportAndroidAllCommandConverter" Executing="ExportAndroidAllCommandConverter_Executing" Error="CommandConverter_Error" />
+    <toms:ConfirmedCommandConverter x:Key="ExportiOSAllCommandConverter" Executing="ExportiOSAllCommandConverter_Executing" Error="CommandConverter_Error" />
     <toms:ConfirmedCommandConverter x:Key="CreateSnapshotCommandConverter" Executing="CreateSnapshotCommandConverter_Executing" Error="CommandConverter_Error" />
     <toms:ConfirmedCommandConverter x:Key="LoadSnapshotCommandConverter" Executing="LoadSnapshotCommandConverter_Executing" Error="CommandConverter_Error" />
     <toms:ConfirmedCommandConverter x:Key="ErrorHandlerCommandConverter" Error="CommandConverter_Error" />
@@ -325,6 +327,27 @@
                 <MenuItem Header="{x:Static properties:Resources.UnloadSnapshot}"
                           Style="{DynamicResource {x:Static styles:ResourceKeys.MenuItemStyle}}"
                           Command="{Binding UnloadSnapshotCommand}" />
+              </MenuItem>
+              <MenuItem Padding="2" Style="{DynamicResource {x:Static styles:ResourceKeys.MenuItemStyle}}" HeaderTemplate="{DynamicResource {x:Static themes:ResourceKeys.MenuItemDropDownDataTemplate}}">
+                <MenuItem.Header>
+                  <Image SnapsToDevicePixels="True" Source="/ResXManager.View;component/Assets/phone.png">
+                    <Image.Style>
+                      <Style TargetType="Image" BasedOn="{StaticResource ImageStyle}">
+                        <Style.Triggers>
+                          <DataTrigger Binding="{Binding LoadedSnapshot}" Value="{x:Null}">
+                            <Setter Property="Opacity" Value=".5" />
+                          </DataTrigger>
+                        </Style.Triggers>
+                      </Style>
+                    </Image.Style>
+                  </Image>
+                </MenuItem.Header>
+                <MenuItem Header="{x:Static properties:Resources.ExportAndroidAll}"
+                          Style="{DynamicResource {x:Static styles:ResourceKeys.MenuItemStyle}}"
+                          Command="{Binding ExportAndroidAllCommand, Converter={StaticResource ExportAndroidAllCommandConverter}}" />
+                <MenuItem Header="{x:Static properties:Resources.ExportiOSAll}"
+                          Style="{DynamicResource {x:Static styles:ResourceKeys.MenuItemStyle}}"
+                          Command="{Binding ExportiOSAllCommand, Converter={StaticResource ExportiOSAllCommandConverter}}" />
               </MenuItem>
             </Menu>
             <Separator />

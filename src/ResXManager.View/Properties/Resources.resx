@@ -492,4 +492,10 @@ Your ResXManager team.
   <data name="AppendPrefixValueFieldTypeLabel" xml:space="preserve">
     <value>Append the translation prefix to</value>
   </data>
+  <data name="ExportAndroidAll" xml:space="preserve">
+    <value>Export Android all</value>
+  </data>
+  <data name="ExportiOSAll" xml:space="preserve">
+    <value>Export iOS all</value>
+  </data>
 </root>

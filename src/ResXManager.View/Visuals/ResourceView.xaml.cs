@@ -200,6 +200,36 @@ public partial class ResourceView
         WaitCursor.Start(this);
     }
 
+    private void ExportAndroidAllCommandConverter_Executing(object? sender, ConfirmedCommandEventArgs e)
+    {
+        var dlg = new Ookii.Dialogs.Wpf.VistaFolderBrowserDialog()
+        {
+            ShowNewFolderButton = true,
+        };
+
+        if (dlg.ShowDialog() != true)
+            return;
+
+        e.Parameter = dlg.SelectedPath;
+
+        WaitCursor.Start(this);
+    }
+
+    private void ExportiOSAllCommandConverter_Executing(object? sender, ConfirmedCommandEventArgs e)
+    {
+        var dlg = new Ookii.Dialogs.Wpf.VistaFolderBrowserDialog()
+        {
+            ShowNewFolderButton = true,
+        };
+
+        if (dlg.ShowDialog() != true)
+            return;
+
+        e.Parameter = dlg.SelectedPath;
+
+        WaitCursor.Start(this);
+    }
+
     private void DeleteCommandConverter_Executing(object? sender, ConfirmedCommandEventArgs e)
     {
         if (MessageBox.Show(Properties.Resources.ConfirmDeleteItems, Properties.Resources.Title, MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes)

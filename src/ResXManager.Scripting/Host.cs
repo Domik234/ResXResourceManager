@@ -96,6 +96,22 @@ public sealed class Host : IDisposable
         changes.Apply();
     }
 
+    private void ExportAndroidAll(string? directoryPath)
+    {
+        if (directoryPath.IsNullOrEmpty())
+            return;
+
+        ResourceManager.ExportAndroidFiles(directoryPath);
+    }
+
+    private void ExportiOSAll(string? directoryPath)
+    {
+        if (directoryPath.IsNullOrEmpty())
+            return;
+
+        ResourceManager.ExportiOSFiles(directoryPath);
+    }
+
     public string CreateSnapshot()
     {
         return ResourceManager.CreateSnapshot();

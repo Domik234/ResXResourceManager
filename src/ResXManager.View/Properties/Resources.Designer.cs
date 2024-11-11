@@ -182,15 +182,6 @@ namespace ResXManager.View.Properties {
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to "Choose columns"
-        /// </summary>
-        public static string ChooseColumnsToolTip {
-            get {
-                return ResourceManager.GetString("ChooseColumnsToolTip", resourceCulture) ?? string.Empty;
-            }
-        }
-
-        /// <summary>
         ///   Looks up a localized string similar to "The number of references found in code files. This..."
         /// </summary>
         public static string CodeReferencesToolTip {
@@ -506,6 +497,15 @@ namespace ResXManager.View.Properties {
         }
 
         /// <summary>
+        ///   Looks up a localized string similar to "Export Android all"
+        /// </summary>
+        public static string ExportAndroidAll {
+            get {
+                return ResourceManager.GetString("ExportAndroidAll", resourceCulture) ?? string.Empty;
+            }
+        }
+
+        /// <summary>
         ///   Looks up a localized string similar to "Export all"
         /// </summary>
         public static string ExportExcelAll {
@@ -520,6 +520,15 @@ namespace ResXManager.View.Properties {
         public static string ExportExcelSelection {
             get {
                 return ResourceManager.GetString("ExportExcelSelection", resourceCulture) ?? string.Empty;
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Export iOS all"
+        /// </summary>
+        public static string ExportiOSAll {
+            get {
+                return ResourceManager.GetString("ExportiOSAll", resourceCulture) ?? string.Empty;
             }
         }
 
@@ -574,6 +583,15 @@ namespace ResXManager.View.Properties {
         public static string HelpButtonToolTip {
             get {
                 return ResourceManager.GetString("HelpButtonToolTip", resourceCulture) ?? string.Empty;
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Choose columns"
+        /// </summary>
+        public static string ChooseColumnsToolTip {
+            get {
+                return ResourceManager.GetString("ChooseColumnsToolTip", resourceCulture) ?? string.Empty;
             }
         }
 
@@ -1201,10 +1219,6 @@ namespace ResXManager.View.Properties {
         /// </summary>
         CellSelectionToolTip,
         /// <summary>
-        ///   Looks up a localized string similar to Choose columns.
-        /// </summary>
-        ChooseColumnsToolTip,
-        /// <summary>
         ///   Looks up a localized string similar to The number of references found in code files. This....
         /// </summary>
         CodeReferencesToolTip,
@@ -1345,6 +1359,10 @@ namespace ResXManager.View.Properties {
         /// </summary>
         ErrorAddingNewResourceFile,
         /// <summary>
+        ///   Looks up a localized string similar to Export Android all.
+        /// </summary>
+        ExportAndroidAll,
+        /// <summary>
         ///   Looks up a localized string similar to Export all.
         /// </summary>
         ExportExcelAll,
@@ -1352,6 +1370,10 @@ namespace ResXManager.View.Properties {
         ///   Looks up a localized string similar to Export selection.
         /// </summary>
         ExportExcelSelection,
+        /// <summary>
+        ///   Looks up a localized string similar to Export iOS all.
+        /// </summary>
+        ExportiOSAll,
         /// <summary>
         ///   Looks up a localized string similar to File exclusion filter.
         /// </summary>
@@ -1376,6 +1398,10 @@ namespace ResXManager.View.Properties {
         ///   Looks up a localized string similar to Documentation.
         /// </summary>
         HelpButtonToolTip,
+        /// <summary>
+        ///   Looks up a localized string similar to Choose columns.
+        /// </summary>
+        ChooseColumnsToolTip,
         /// <summary>
         ///   Looks up a localized string similar to Import.
         /// </summary>
